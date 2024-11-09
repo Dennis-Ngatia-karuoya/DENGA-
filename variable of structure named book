@@ -1,23 +1,33 @@
 //c structures
 #include <stdio.h>
 #include <string.h>
-struct book{
-char title[30];
-char author[30];
-float ISBN;
-float price;
-int publicationyear;
-}book1,book2;
-int main(){
-strcpy(book1.title,"Introduction to programming");
-strcpy(book1.author,"John Smith");
-book1.ISBN= 9780131103627;
-book1. price=49.99;
-book1.publicationyear =2022;
-printf("Title:%s\n",book1.title);
-printf("Author:%s\n",book1.author);
-printf("ISBN:%f\n",book1.ISBN);
-printf("Price:%f\n",book1.price);
-printf("publicationyear:%d\n",book1.publicationyear);
-       return 0;
+
+// Define a structure named 'book' to represent book information
+struct book {
+    char title[30];  // Character array to store the book title (max 30 characters)
+    char author[30]; // Character array to store the book author (max 30 characters)
+    float ISBN;     // Float variable to store the book's ISBN
+    float price;     // Float variable to store the book's price
+    int publicationyear; // Integer variable to store the book's publication year
+};
+
+// Declare two variables of type 'book' named 'book1' and 'book2'
+struct book book1, book2; 
+
+int main() {
+    // Assign values to the fields of 'book1'
+    strcpy(book1.title, "Introduction to programming"); // Copy the title string
+    strcpy(book1.author, "John Smith"); // Copy the author string
+    book1.ISBN = 9780131103627; // Assign the ISBN
+    book1.price = 49.99; // Assign the price
+    book1.publicationyear = 2022; // Assign the publication year
+
+    // Print the book information for 'book1'
+    printf("Title:%s\n", book1.title);
+    printf("Author:%s\n", book1.author);
+    printf("ISBN:%f\n", book1.ISBN);
+    printf("Price:%f\n", book1.price);
+    printf("publicationyear:%d\n", book1.publicationyear);
+
+    return 0;
 }
